@@ -12,7 +12,7 @@ namespace Drive
         protected int cargo;
         protected int maxCargo = 50;
 
-        public Bus(string nom, float fuel, int peoples) : base(nom, fuel)
+        public Bus(string number, float topliva, int peoples) : base(number, topliva)
         {
             this.cargo = peoples;
         }

@@ -11,7 +11,7 @@ namespace Drive
         protected int cargo;
         protected int maxCargo = 50;
 
-        public Truck(string nom, float fuel, int peoples) : base(nom, fuel)
+        public Truck(string number, float topliva, int peoples) : base(number, topliva)
         {
             this.cargo = peoples;
         }
@@ -20,7 +20,7 @@ namespace Drive
         {
 
             Console.WriteLine($"Расход: {(cargo * 0.25F) + (RetSpees() * 0.25F)}");
-            Console.WriteLine($"Мешков картошки: {cargo}");
+            Console.WriteLine($"Груз: {cargo}");
             base.OutInfo();
 
 

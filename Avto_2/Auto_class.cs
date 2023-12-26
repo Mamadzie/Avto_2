@@ -8,11 +8,11 @@ namespace Drive
 {
     internal class Logik
     {
-        string nom;
+        string number;
         float topliva;
 
         float currentDistance;
-        float speed = 40;
+        float speed = 50;
         float maxSpeed = 120;
         float maxtopliva = 100;
 
@@ -22,11 +22,10 @@ namespace Drive
             return speed;
         }
 
-        public Logik(string nom, float fuel)
+        public Logik(string number, float topliva)
         {
-            this.nom = nom;
-            this.topliva = fuel;
-
+            this.number = number;
+            this.topliva = topliva;
         }
 
 
@@ -34,8 +33,8 @@ namespace Drive
         public virtual void OutInfo()
         {
 
-            Console.WriteLine($"Информация\nНомер: {nom}\nТопливо: {topliva}\nСкорость: {speed}");
-            Console.WriteLine($"Пройденная дистанция: {currentDistance}\n-----------------------------");
+            Console.WriteLine($"Информация\nНомер: {number}\nТопливо: {topliva}\nСкорость: {speed}");
+            Console.WriteLine($"Пройденная дистанция: {currentDistance}");
         }
 
         protected void speedAdd(float addspeed)
@@ -121,14 +120,14 @@ namespace Drive
 
 
                     Console.WriteLine("Едем дальше?\n1 - да\n2 - нет");
-                    int what = int.Parse(Console.ReadLine());
-                    if (what == 1)
+                    int vibar = int.Parse(Console.ReadLine());
+                    if (vibar == 1)
                     {
                         Console.WriteLine("Чтобы доехать нужно заправиться. Вводи сколько зальём: ");
                         zaprawka(float.Parse(Console.ReadLine()));
                         Move(tempdist, cargo);
                     }
-                    else if (what == 2)
+                    else if (vibar == 2)
                     {
                         Console.WriteLine("Ну и хрен с вами золотые рыбки.");//крылатая фраза
                     }
@@ -142,9 +141,9 @@ namespace Drive
         }
 
 
-        public void Dostup_Auto(int what3, float znach1, float znach2)
+        public void Dostup_Auto(int vibar2, float znach1, float znach2)
         {
-            switch (what3)
+            switch (vibar2)
             {
                 case 1:
                     OutInfo();

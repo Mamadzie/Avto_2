@@ -1,6 +1,8 @@
 ﻿using Drive;
 using System.Diagnostics;
 
+
+
 Bus bus = new Bus("777", 10, 0);
 Truck truck = new Truck("777", 60, 0);
 int choice;
@@ -52,7 +54,6 @@ while (true)
             Console.Clear();
             Console.WriteLine("Изменить количество полезной нагрузки (целое число).");
             Console.WriteLine("1 - Добавить нагрузку. 2 - Уменьшить нагрузку");
-            Console.Write("Ввод: ");
 
             int actionChoice = int.Parse(Console.ReadLine());
             Console.Write("На сколько изменить количество: ");

@@ -2,7 +2,6 @@
 using System.Diagnostics;
 
 
-
 Bus bus = new Bus("777", 10, 0);
 Truck truck = new Truck("777", 60, 0);
 int choice;

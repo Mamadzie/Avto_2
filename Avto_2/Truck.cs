@@ -71,8 +71,5 @@ namespace Drive
                 CargoRemove(cheslo2);
             }
         }
-
-
-
     }
 }
